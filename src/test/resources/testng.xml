@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="LMS_Testing_Suite" parallel="methods" thread-count="3">
+
+    <parameter name="browser" value="chrome"/>
+    <parameter name="environment" value="qa"/>
+
+    <listeners>
+        <listener class-name="org.testng.reporters.EmailableReporter"/>
+    </listeners>
+
+    <test name="Smoke_Tests" priority="1">
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.AuthenticationTests">
+                <methods>
+                    <include name="testValidLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Authentication_Tests" priority="2">
+        <classes>
+            <class name="tests.AuthenticationTests"/>
+        </classes>
+    </test>
+
+    <test name="Course_Tests" priority="3">
+        <classes>
+            <class name="tests.CourseTests"/>
+        </classes>
+    </test>
+
+    <test name="Regression_Tests" priority="4">
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.RegressionTestSuite"/>
+        </classes>
+    </test>
+
+</suite>

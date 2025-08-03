@@ -1,0 +1,7 @@
+base\BaseTest.class
+utils\APIUtils.class
+pages\LoginPage.class
+utils\DatabaseUtils.class
+pages\DashboardPage.class
+utils\ConfigReader.class
+pages\CoursePage.class
