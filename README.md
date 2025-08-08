@@ -77,7 +77,7 @@ lms-automation-framework/
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/lms-automation.git
+   git clone https://github.com/LMS-TEST/lms-automation.git
    cd lms-automation
    ```
 
@@ -186,6 +186,7 @@ For issues and questions, please contact:
 
 ## License
 This project is licensed under the MIT License.
+
 
 
 
